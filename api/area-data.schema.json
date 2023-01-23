@@ -1,0 +1,38 @@
+{
+    "title": "areaData",
+    "type": "object",
+    "$defs": {
+        "NameAndId": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer", "minimum": 0 },
+                "name": { "type": "string" }
+            },
+            "required": ["id", "name"],
+            "additionalProperties": false
+        }
+    },
+    "properties": {
+        "areas": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/NameAndId" }
+        },
+        "groups": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/NameAndId" }
+        },
+        "devices": {
+            "type": "array",
+            "items": { "$ref": "https://braden.com/device" }
+        },
+        "systems": {
+            "type": "array",
+            "maxItems": 0
+        },
+        "scenes": {
+            "type": "array",
+            "maxItems": 0
+        }
+    },
+    "required": ["areas", "groups", "devices"]
+}

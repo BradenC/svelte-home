@@ -1,0 +1,41 @@
+@import "./reset.scss";
+@import "./colors.scss";
+@import "./variables.scss";
+@import "./scrollbar.scss";
+
+
+* {
+	font-family: $fontMain;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	padding: .5rem;
+	color: $text2;
+
+	font-size: 1rem;
+}
+
+a {
+	padding: $clickPadding;
+	text-decoration: none;
+	color: $text2;
+}
+
+a, button {
+	border-radius: $borderRadius;
+}
+
+a:hover, button:hover {
+	cursor: pointer;
+	background-color: $bg3;
+}
+
+button.selected {
+	background-color: $bg3;
+}
+
+h1 {
+    color: $text4;
+}

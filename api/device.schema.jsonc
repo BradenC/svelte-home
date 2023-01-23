@@ -1,0 +1,263 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://braden_cok.com/unit-controller/areaData.schema.json",
+    // "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "areaData",
+    "type": "object",
+    "$defs": {
+        "clusters": {
+            "type": "object",
+            "properties": {
+                "basic": {
+                    "type": "object",
+                    "properties": {
+                        "productName": { "type": "string" },
+                        "productVersion": { "type": "string" },
+                        "serialNumber": { "type": "string" },
+                        "manufacturerName": { "type": "string" },
+                        "manufactureDate": { "type": "string", "format": "date" },
+                        "powerType": { "enum": ["battery", "main"] },
+                        "batteryPercent": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "isPluggedIn": { "type": "boolean" }
+                    },
+                    "oneOf": [
+                        {
+                            "properties": { "powerType": { "const": "battery" } },
+                            "required": ["powerType", "batteryPercent"]
+                        },
+                        { 
+                            "properties": { "powerType": { "const": "main" } },
+                            "required": ["powerType", "isPluggedIn"]
+                        }
+                    ]
+                },
+                "onOff": {
+                    "type": "object",
+                    "properties": {
+                        "on": { "type": "boolean" }
+                    },
+                    "required": ["on"]
+                },
+                "level": {
+                    "type": "object",
+                    "properties": {
+                        "level": { "type": "integer", "minimum": 0, "maximum": 254 }
+                    },
+                    "required": ["level"]
+                },
+                "measurement": {
+                    "type": "object",
+                    "properties": {
+                        "value": { "type": "number" }
+                    },
+                    "required": ["value"]
+                },
+                "sensor": {
+                    "type": "object",
+                    "properties": {
+                        "hi": { "type": "number" },
+                        "lo": { "type": "number" },
+                        "state": { "enum": ["hi", "lo", "on"] }
+                    },
+                    "required": ["state"]
+                },
+                "color": {
+                    "type": "object",
+                    "properties": {
+                        "hue": { "type": "integer", "minimum": 0, "maximum": 100 },
+                        "saturation": { "type": "integer", "minimum": 0, "maximum": 100 }
+                    },
+                    "required": ["hue", "saturation"]
+                },
+                "lock": {
+                    "type": "object",
+                    "properties": {
+                        "locked": { "type": "boolean" }
+                    },
+                    "required": ["locked"]
+                },
+                "camera": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "appliance": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "windowCovering": {
+                    "type": "object",
+                    "properties": {
+                        "openPercent": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "moveState": { "enum": ["still", "opening", "closing"] }
+                    },
+                    "required": ["openPercent"]
+                },
+                "media": {
+                    "type": "object",
+                    "properties": {
+                        "mediaTypes": {
+                            "type": "array",
+                            "items": { "enum": ["audio", "video"] }
+                        },
+                        "playing": { "type": "boolean" }
+                    },
+                    "required": ["playing"]
+                },
+                "mode": {
+                    "type": "object",
+                    "properties": {
+                        "mode": { "type": "integer" }
+                    },
+                    "required": ["mode"]
+                }
+            }
+        },
+        "endpoint": {
+            "type": "object",
+            "oneOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "metadata"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["basic"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "enum": ["Heater", "Humidifier"]
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "level"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "colorLight"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "level", "color"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "enum": ["temperatureMeasurerSensor", "humidityMeasurerSensor"]
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["measurement", "sensor"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "lock"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "lock"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "camera"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "window"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "windowCovering"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "media"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "level", "media"]
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "endpointKind": {
+                            "const": "mode"
+                        },
+                        "clusters": {
+                            "$ref": "#/$defs/clusters",
+                            "required": ["onOff", "mode"]
+                        }
+                    }
+                }
+            ],
+            "required": ["clusters"]
+        }
+    },
+    "properties": {
+        "id": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "The ID of the device"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the device"
+        },
+        "deviceKind": {
+          "enum": ["device", "bridge", "router"],
+          "default": "device",
+          "description": "Top level device type"
+        },
+        "areas": {
+            "type": "array",
+            "items": { "type": "number" },
+            "description": "List of IDs of areas this device is in"
+        },
+        "groups": {
+            "type": "array",
+            "items": { "type": "number" },
+            "description": "List of IDs of groups this device is in"
+        },
+        "endpoints": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/endpoint" },
+            "description": "List of endpoints on this device"
+        }
+    },
+    "required": ["id", "name", "endpoints"],
+    "additionalProperties": false
+}

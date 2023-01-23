@@ -1,0 +1,42 @@
+{
+    "areaGroups": [
+        {
+            "name": "All",
+            "areaNames": [
+                "All"
+            ]
+        },
+        {
+            "name": "Upper Floor",
+            "areaNames": [
+                "Entrance",
+                "Living Room",
+                "Kitchen",
+                "Dining",
+                "Bathroom",
+                "Office",
+                "Laundry"
+            ]
+        },
+        {
+            "name": "Upper Floor",
+            "areaNames": [
+                "Upper Hallway",
+                "Bedroom 1",
+                "Bedroom 2",
+                "Kids Bathroom",
+                "Main Wing",
+                "Main Closet",
+                "Main Bedroom",
+                "Main Bathroom"
+            ]
+        },
+        {
+            "name": "Exterior",
+            "areaNames": [
+                "Balcony",
+                "Building Entrance"
+            ]
+        }
+    ]
+}

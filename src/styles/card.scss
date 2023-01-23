@@ -1,0 +1,32 @@
+@import "./globals.scss";
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $bg2;
+
+    padding: 1em;
+
+    border-radius: $borderRadius;
+
+    h2 {
+        color: $text2;
+    }
+
+    span {
+        color: $text8;
+        font-size: 1.25rem;
+    }
+
+    .icon {
+        color: $iconNormal;
+    }
+
+    .icon:hover {
+        cursor: pointer;
+        color: $iconHover;
+    }
+}

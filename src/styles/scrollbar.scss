@@ -1,0 +1,11 @@
+@import "./colors.scss";
+
+
+*::-webkit-scrollbar {
+	width: .75rem;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $text8;
+	border-radius: .75rem;
+}

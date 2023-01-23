@@ -1,0 +1,1214 @@
+{
+    "areas": [
+        {
+            "id": 1,
+            "name": "Entrance"
+        },
+        {
+            "id": 2,
+            "name": "Living Room"
+        },
+        {
+            "id": 3,
+            "name": "Kitchen"
+        },
+        {
+            "id": 4,
+            "name": "Dining"
+        },
+        {
+            "id": 5,
+            "name": "Bathroom"
+        },
+        {
+            "id": 6,
+            "name": "Office"
+        },
+        {
+            "id": 7,
+            "name": "Laundry"
+        },
+        {
+            "id": 8,
+            "name": "Upper Hallway"
+        },
+        {
+            "id": 9,
+            "name": "Bedroom 1"
+        },
+        {
+            "id": 10,
+            "name": "Bedroom 2"
+        },
+        {
+            "id": 11,
+            "name": "Kids Bathroom"
+        },
+        {
+            "id": 12,
+            "name": "Main Wing"
+        },
+        {
+            "id": 13,
+            "name": "Main Closet"
+        },
+        {
+            "id": 14,
+            "name": "Main Bedroom"
+        },
+        {
+            "id": 15,
+            "name": "Main Bathroom"
+        },
+        {
+            "id": 16,
+            "name": "Balcony"
+        },
+        {
+            "id": 17,
+            "name": "Building Entrance"
+        }
+    ],
+    "groups": [
+        {
+            "id": 1,
+            "name": "Group One"
+        },
+        {
+            "id": 2,
+            "name": "Group Two"
+        }
+    ],
+    "devices": [
+        {
+            "id": 39,
+            "name": "Thermostat",
+            "deviceKind": "device",
+            "areas": [1],
+            "groups": [1],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Thermostat",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "temperatureMeasurerSensor",
+                    "clusters": {
+                        "measurement": { "value": 76 },
+                        "sensor": {
+                            "hi": 75,
+                            "lo": 71,
+                            "state": "on"
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "humidityMeasurerSensor",
+                    "clusters": {
+                        "measurement": { "value": 0.51 },
+                        "sensor": {
+                            "hi": 0.50,
+                            "lo": 0.40,
+                            "state": "hi"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "name": "Heater",
+            "deviceKind": "device",
+            "areas": [1],
+            "groups": [1],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Heater",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "heater",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "name": "Humidifier",
+            "deviceKind": "device",
+            "areas": [1],
+            "groups": [1],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Humidifier",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "humidifier",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 0 }
+                    }
+                }
+            ]
+        },
+
+
+
+
+        {
+            "id": 2,
+            "name": "Ceiling Light",
+            "areas": [1],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Ceiling Light",
+            "areas": [2],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Halo Light",
+            "areas": [2],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "LineLight",
+                            "productVersion": "1",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Floor Lamp",
+            "areas": [2],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Floor Lamp",
+                            "productVersion": "3a",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Table Lamp",
+            "areas": [2],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Table Lamp",
+                            "productVersion": "2.8b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "TV",
+            "areas": [2],
+            "groups": [2],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Television",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "media",
+                    "clusters": {
+                        "onOff": { "on": false },
+                        "level": { "level": 90 },
+                        "media": {
+                            "mediaTypes": ["audio", "video"],
+                            "playing": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Speakers",
+            "areas": [2],
+            "groups": [2],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Speakers",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "media",
+                    "clusters": {
+                        "onOff": { "on": false },
+                        "level": { "level": 45 },
+                        "media": {
+                            "mediaTypes": ["audio"],
+                            "playing": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Ceiling Light",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Halo Light",
+            "areas": [3, 4],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "Line Light",
+                            "productVersion": "1b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Task Light",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "Mini DownLight",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Oven",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Oven",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Stove",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Stove",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Microwave",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Microwave",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Fridge",
+            "areas": [3],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Fridge",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Chandelier",
+            "areas": [4],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Chandelier",
+                            "productVersion": "4.1a",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 20, "saturation": 100 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Ceiling Light",
+            "areas": [5],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "name": "Ceiling Fan",
+            "areas": [5],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Fan",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "name": "Ceiling Light",
+            "areas": [6],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "name": "Ceiling Light",
+            "areas": [7],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "name": "Washer",
+            "areas": [7],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Washer",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "name": "Dryer",
+            "areas": [7],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Dryer",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Ceiling Light",
+            "areas": [8],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Ceiling Light",
+            "areas": [9],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Ceiling Light",
+            "areas": [10],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "Ceiling Light",
+            "areas": [11],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "name": "Ceiling Light",
+            "areas": [12],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "name": "Ceiling Light",
+            "areas": [13],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "name": "Ceiling Light",
+            "areas": [14],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "name": "Bedside Light",
+            "areas": [14],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "name": "Curtains",
+            "areas": [14],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Curtains",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "name": "Ceiling Light",
+            "areas": [15],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "name": "Ceiling Fan",
+            "areas": [15],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "DownLight",
+                            "productVersion": "221b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "name": "Heated Floor",
+            "areas": [15],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Heated Floor",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "name": "Floor Light",
+            "areas": [16],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "LineLight",
+                            "productVersion": "1a",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "name": "Halo Light",
+            "areas": [16],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "LineLight",
+                            "productVersion": "1b",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "colorLight",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "level": { "level": 254 },
+                        "color": { "hue": 200, "saturation": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "name": "Plant Waterer",
+            "areas": [16],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "The Squirt of Life",
+                            "productVersion": "2",
+                            "serialNumber": "1",
+                            "manufacturerName": "Mock Group",
+                            "manufactureDate": "2023-01-19",
+                            "powerType": "main",
+                            "isPluggedIn": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "name": "Lock",
+            "areas": [17],
+            "groups": [],
+            "endpoints": [
+                {
+                    "endpointKind": "metadata",
+                    "clusters": {
+                        "basic": {
+                            "productName": "Lockeroo",
+                            "powerType": "battery",
+                            "batteryPercent": 0.9
+                        }
+                    }
+                },
+                {
+                    "endpointKind": "lock",
+                    "clusters": {
+                        "onOff": { "on": true },
+                        "lock": { "locked": true }
+                    }
+                }
+            ]
+        }
+    ],
+    "systems": [],
+    "scenes": []
+}
